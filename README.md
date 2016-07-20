@@ -46,10 +46,10 @@ We need to change a few lines of code in the OBCI board definition file to enabl
 
 In this file make changes to the corresponding code so that it reads:
 
-\#define       _SER1_TX_OUT         PPS_OUT_U2TX     // RPB14R = U2TX = 2
-\#define       _SER1_TX_PIN         11  //7                // RB14 CVREF/AN10/C3INB/RPB14/VBUSON/SCK1/CTED5/RB14
-\#define       _SER1_RX_IN          PPS_IN_U2RX      // U2RXR = RPA1 = 0
-\#define       _SER1_RX_PIN         12  //10               // RA1  PGEC3/VREF-/CVREF-/AN1/RPA1/CTED2/PMD6/RA1 
+\#define       _SER1_TX_OUT         PPS_OUT_U2TX     // RPB14R = U2TX = 2  
+\#define       _SER1_TX_PIN         11  //7                // RB14 CVREF/AN10/C3INB/RPB14/VBUSON/SCK1/CTED5/RB14  
+\#define       _SER1_RX_IN          PPS_IN_U2RX      // U2RXR = RPA1 = 0  
+\#define       _SER1_RX_PIN         12  //10               // RA1  PGEC3/VREF-/CVREF-/AN1/RPA1/CTED2/PMD6/RA1  
 
 
 Save the changes.
