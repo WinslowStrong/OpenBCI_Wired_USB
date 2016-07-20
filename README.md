@@ -99,7 +99,7 @@ The modifications made to the firmware are:
 * Removed the "buger protocol" code (it bracketed all commands sent with "+" signs, to reduce the chance a noise error had an effect).  Not necessary over Wired USB.
 * In the OBCI board definition chipkit core file, enabled pins 11 (D11 on the board) and 12 (D12) as UART1 TX and RX, repsectively.
 * Changed all "Serial0" --> "Serial1" in the .ino and the OpenBCI_32_Daisy library files.  Serial0 is still the RFduino, while Serial1 is UART1, using OBCI pins D11 and D12 to send and recieve
-* Changed the way that daisy mode sends data - instead of sending ch. 1-8, waiting 1/SampleRate, then sending ch. 9-16, etc, it sends ch. 1-8 and immediatly sends ch. 9-16 in the next packet.  It still takes the mean of the current and previous sample, which is ideally would be removed, but that doesn't matter that much.  Fortunately, this doesn't require any change on the receiving end.
+* Changed the way that daisy mode sends data - instead of sending ch. 1-8, waiting 1/SampleRate, then sending ch. 9-16, etc, it sends ch. 1-8 and immediatly sends ch. 9-16 in the next packet.  Also, it used to send the mean of the channel data from the current and previous sample (since samples were only being sent every other 1/SampleRate).  Now it sends just the current sample's data.
 
 
 ### 2. Thanks!
