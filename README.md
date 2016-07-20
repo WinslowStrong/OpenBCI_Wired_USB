@@ -101,6 +101,7 @@ The modifications made to the firmware are:
 * Changed all "Serial0" --> "Serial1" in the .ino and the OpenBCI_32_Daisy library files.  Serial0 is still the RFduino, while Serial1 is UART1, using OBCI pins D11 and D12 to send and recieve
 * Changed the way that daisy mode sends data - instead of sending ch. 1-8, waiting 1/SampleRate, then sending ch. 9-16, etc, it sends ch. 1-8 and immediatly sends ch. 9-16 in the next packet.  It still takes the mean of the current and previous sample, which is ideally would be removed, but that doesn't matter that much.  Fortunately, this doesn't require any change on the receiving end.
 
+
 ### 2. Thanks!
 
 Huge thanks to William Croft (wjcroft on the forums) for figuring out how to make this work and troubleshooting nearly every stage of this process.  This is really more his work than mine.
